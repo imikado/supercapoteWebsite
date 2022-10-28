@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>titre du site</title>
+ 
+    <!-- meta -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+<script src="lib/main.js"></script>    
+<script src="othello.js"></script>
+<style>
+*{
+font-family:arial;
+font-size:12px;
+}
+a img{
+border:0px;
+}
+#point{
+position:absolute;
+width:2px;
+height:2px;
+background:red;
+}
+.case{
+position:absolute;
+}
+#debug{
+width:100%;
+height:400px;
+}
+#tour{
+position:absolute;
+}
+#jeu{
+position:absolute;
+}
+.pions{
+position:absolute;
+}
+#score{
+border:1px solid gray;
+width:386px;
+text-align:center;
+margin-bottom:9px;
+}
+#content{
+ }
+#content a{
+cursor:pointer;
+}
+#content img{
+border:0px;
+}
+#life{
+position:absolute;
+left:10px;
+top:10px;
+}
+
+#content table{
+border-collapse:collapse;
+}
+#content table td{
+border:1px solid #bbb;
+}
+</style>
+</head>
+<body onload="load()">
+
+<div id="score"><img id="player" src="img/othello-1.png"/></div>
+
+<div id="content">
+
+<table><tbody><tr><td><a href="#" onclick="game.add(0,0);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_0_0"></a></td><td><a href="#" onclick="game.add(0,1);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_0_1"></a></td><td><a href="#" onclick="game.add(0,2);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_0_2"></a></td><td><a href="#" onclick="game.add(0,3);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_0_3"></a></td><td><a href="#" onclick="game.add(0,4);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_0_4"></a></td><td><a href="#" onclick="game.add(0,5);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_0_5"></a></td><td><a href="#" onclick="game.add(0,6);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_0_6"></a></td><td><a href="#" onclick="game.add(0,7);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_0_7"></a></td><td><a href="#" onclick="game.add(0,8);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_0_8"></a></td></tr><tr><td><a href="#" onclick="game.add(1,0);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_1_0"></a></td><td><a href="#" onclick="game.add(1,1);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_1_1"></a></td><td><a href="#" onclick="game.add(1,2);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_1_2"></a></td><td><a href="#" onclick="game.add(1,3);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_1_3"></a></td><td><a href="#" onclick="game.add(1,4);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_1_4"></a></td><td><a href="#" onclick="game.add(1,5);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_1_5"></a></td><td><a href="#" onclick="game.add(1,6);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_1_6"></a></td><td><a href="#" onclick="game.add(1,7);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_1_7"></a></td><td><a href="#" onclick="game.add(1,8);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_1_8"></a></td></tr><tr><td><a href="#" onclick="game.add(2,0);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_2_0"></a></td><td><a href="#" onclick="game.add(2,1);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_2_1"></a></td><td><a href="#" onclick="game.add(2,2);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_2_2"></a></td><td><a href="#" onclick="game.add(2,3);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_2_3"></a></td><td><a href="#" onclick="game.add(2,4);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_2_4"></a></td><td><a href="#" onclick="game.add(2,5);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_2_5"></a></td><td><a href="#" onclick="game.add(2,6);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_2_6"></a></td><td><a href="#" onclick="game.add(2,7);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_2_7"></a></td><td><a href="#" onclick="game.add(2,8);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_2_8"></a></td></tr><tr><td><a href="#" onclick="game.add(3,0);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_3_0"></a></td><td><a href="#" onclick="game.add(3,1);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_3_1"></a></td><td><a href="#" onclick="game.add(3,2);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_3_2"></a></td><td><a href="#" onclick="game.add(3,3);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_3_3"></a></td><td><a href="#" onclick="game.add(3,4);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_3_4"></a></td><td><a href="#" onclick="game.add(3,5);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_3_5"></a></td><td><a href="#" onclick="game.add(3,6);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_3_6"></a></td><td><a href="#" onclick="game.add(3,7);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_3_7"></a></td><td><a href="#" onclick="game.add(3,8);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_3_8"></a></td></tr><tr><td><a href="#" onclick="game.add(4,0);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_4_0"></a></td><td><a href="#" onclick="game.add(4,1);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_4_1"></a></td><td><a href="#" onclick="game.add(4,2);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_4_2"></a></td><td><a href="#" onclick="game.add(4,3);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_4_3"></a></td><td><a href="#" onclick="game.add(4,4);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_4_4"></a></td><td><a href="#" onclick="game.add(4,5);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_4_5"></a></td><td><a href="#" onclick="game.add(4,6);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_4_6"></a></td><td><a href="#" onclick="game.add(4,7);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_4_7"></a></td><td><a href="#" onclick="game.add(4,8);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_4_8"></a></td></tr><tr><td><a href="#" onclick="game.add(5,0);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_5_0"></a></td><td><a href="#" onclick="game.add(5,1);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_5_1"></a></td><td><a href="#" onclick="game.add(5,2);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_5_2"></a></td><td><a href="#" onclick="game.add(5,3);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_5_3"></a></td><td><a href="#" onclick="game.add(5,4);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_5_4"></a></td><td><a href="#" onclick="game.add(5,5);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_5_5"></a></td><td><a href="#" onclick="game.add(5,6);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_5_6"></a></td><td><a href="#" onclick="game.add(5,7);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_5_7"></a></td><td><a href="#" onclick="game.add(5,8);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_5_8"></a></td></tr><tr><td><a href="#" onclick="game.add(6,0);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_6_0"></a></td><td><a href="#" onclick="game.add(6,1);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_6_1"></a></td><td><a href="#" onclick="game.add(6,2);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_6_2"></a></td><td><a href="#" onclick="game.add(6,3);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_6_3"></a></td><td><a href="#" onclick="game.add(6,4);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_6_4"></a></td><td><a href="#" onclick="game.add(6,5);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_6_5"></a></td><td><a href="#" onclick="game.add(6,6);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_6_6"></a></td><td><a href="#" onclick="game.add(6,7);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_6_7"></a></td><td><a href="#" onclick="game.add(6,8);return false;"><img style="width: 40px; height: 40px;" src="img/othello-0.png" id="case_6_8"></a></td></tr><tr></tr></tbody></table>
+
+</div>
+<!--
+<textarea id="debug"></textarea>
+-->
+</body>
+</html>
+
+

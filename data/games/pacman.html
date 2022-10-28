@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>titre du site</title>
+ 
+    <!-- meta -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+<script src="lib/main.js"></script>
+<script src="lib/canvas.js"></script>
+<script src="pacman.js"></script>
+
+
+<style>
+	body{
+	background:#4c4949;	
+	}
+*{
+font-family:arial;
+font-size:12px;
+margin:0px;
+}
+#point{
+position:absolute;
+width:2px;
+height:2px;
+background:red;
+}
+#pointhaut{
+position:absolute;
+width:2px;
+height:2px;
+background:blue;
+
+}
+#pointbas{
+position:absolute;
+width:2px;
+height:2px;
+background:orange;
+
+}
+#debug{
+width:60%;
+height:200px;
+display:none;
+}
+#tour{
+position:absolute;
+}
+#jeu{
+position:absolute;
+}
+.pions{
+position:absolute;
+}
+#i{
+position:absolute;
+left:750px;
+}
+#j{
+position:absolute;
+left:750px;
+top:20px;
+}
+
+#perso{
+top:0px;
+left:0px;
+}
+
+#game{
+}
+
+#gameover{
+	top:300px;
+	color:white;
+	font-size:12px;
+	font-weight:bold;
+}
+#canvas{
+	background:#4c4949;
+}
+
+
+</style>
+</head>
+<body onload="load()">
+
+<div class="pions" id="txti"></div>
+<div class="pions" id="txtj"></div>
+
+<div id="tour"></div>
+<div id="jeu"></div>
+
+<div id="point"></div>
+<div id="pointhaut"></div>
+<div id="pointbas"></div>
+
+<div class="pions" id="perso"><img src="img/pacman.png" /></div>
+
+<div class="pions" id="ghost"><img src="img/ghost.gif" /></div>
+<div class="pions" id="ghost2"><img src="img/ghost.gif" /></div>
+<div class="pions" id="ghost3"><img src="img/ghost.gif" /></div>
+
+
+<div style="clear:both"></div>
+
+<div id="game"><canvas border="1" id="canvas" width="360" height="200">This text is displayed if your browser does not support HTML5 Canvas.</canvas></div>
+
+<div id="gameover"></div>
+<textarea id="debug"></textarea>
+
+</body>
+</html>
+
+

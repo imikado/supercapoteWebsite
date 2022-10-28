@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>tetris</title>
+ 
+    <!-- meta -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+<script src="lib/main.js"></script>  
+<script src="lib/canvas.js"></script>    
+<script src="snake2.js"></script>
+<style>
+*{
+font-family:arial;
+}
+#content{
+background:silver;
+width:400px;
+}
+#score{
+text-align:center;
+border:1px solid gray;
+width:398px;
+}
+#content img{
+vertical-align:top;
+margin:0px;
+border:0px solid gray;
+}
+
+</style>
+<script>
+function debug(txt){
+ document.getElementById('debug').value+=txt;
+}
+function debug1(txt){
+ document.getElementById('debug1').value+=txt;
+}
+</script>
+</head>
+<body onload="load()">
+
+<div id="score">0</div>
+
+<div id="content"></div>
+
+
+</body>
+</html>

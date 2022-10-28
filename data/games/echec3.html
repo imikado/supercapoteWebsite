@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>titre du site</title>
+ 
+    <!-- meta -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+<script src="lib/main.js"></script>    
+<script src="lib/canvas.js"></script>    
+<script src="echec3.js"></script>
+<style>
+*{
+font-family:arial;
+font-size:12px;
+}
+a img{
+border:0px;
+}
+#point{
+position:absolute;
+width:2px;
+height:2px;
+background:red;
+}
+.case{
+position:absolute;
+}
+#debug{
+width:100%;
+height:400px;
+}
+#tour{
+position:absolute;
+}
+#jeu{
+position:absolute;
+}
+.pions{
+position:absolute;
+}
+#tourcolor{
+border:1px solid gray;
+width:300px;
+text-align:center;
+}
+</style>
+</head>
+<body onload="load()">
+<div id="tour"></div>
+<div id="jeu"></div>
+
+ 
+<!--
+<div class="pions" id="tour-noir"><img src="img/tour-noir.png" /></div>
+<div class="pions" id="cavalier-noir"><img src="img/cavalier-noir.png" /></div>
+<div class="pions" id="fou-noir"><img src="img/fou-noir.png" /></div>
+<div class="pions" id="roi-noir"><img src="img/roi-noir.png" /></div>
+<div class="pions" id="dame-noir"><img src="img/dame-noir.png" /></div>
+<div class="pions" id="cavalier-noir2"><img src="img/cavalier-noir.png" /></div>
+<div class="pions" id="fou-noir2"><img src="img/fou-noir.png" /></div>
+<div class="pions" id="tour-noir2"><img src="img/tour-noir.png" /></div>
+
+<div class="pions" id="pion-noir"><img src="img/pion-noir.png" /></div>
+<div class="pions" id="pion-noir2"><img src="img/pion-noir.png" /></div>
+<div class="pions" id="pion-noir3"><img src="img/pion-noir.png" /></div>
+<div class="pions" id="pion-noir4"><img src="img/pion-noir.png" /></div>
+<div class="pions" id="pion-noir5"><img src="img/pion-noir.png" /></div>
+<div class="pions" id="pion-noir6"><img src="img/pion-noir.png" /></div>
+<div class="pions" id="pion-noir7"><img src="img/pion-noir.png" /></div>
+<div class="pions" id="pion-noir8"><img src="img/pion-noir.png" /></div>
+
+<div class="pions" id="tour-blanc"><img src="img/tour-blanc.png" /></div>
+<div class="pions" id="cavalier-blanc"><img src="img/cavalier-blanc.png" /></div>
+<div class="pions" id="fou-blanc"><img src="img/fou-blanc.png" /></div>
+<div class="pions" id="roi-blanc"><img src="img/roi-blanc.png" /></div>
+<div class="pions" id="dame-blanc"><img src="img/dame-blanc.png" /></div>
+<div class="pions" id="fou-blanc2"><img src="img/fou-blanc.png" /></div>
+<div class="pions" id="cavalier-blanc2"><img src="img/cavalier-blanc.png" /></div>
+<div class="pions" id="tour-blanc2"><img src="img/tour-blanc.png" /></div>
+
+<div class="pions" id="pion-blanc"><img src="img/pion-blanc.png" /></div>
+<div class="pions" id="pion-blanc2"><img src="img/pion-blanc.png" /></div>
+<div class="pions" id="pion-blanc3"><img src="img/pion-blanc.png" /></div>
+<div class="pions" id="pion-blanc4"><img src="img/pion-blanc.png" /></div>
+<div class="pions" id="pion-blanc5"><img src="img/pion-blanc.png" /></div>
+<div class="pions" id="pion-blanc6"><img src="img/pion-blanc.png" /></div>
+<div class="pions" id="pion-blanc7"><img src="img/pion-blanc.png" /></div>
+<div class="pions" id="pion-blanc8"><img src="img/pion-blanc.png" /></div>-->
+
+<div id="tourcolor"></div>
+
+<div id="content"></div>
+<!--
+<textarea id="debug"></textarea>
+-->
+</body>
+</html>
+
+

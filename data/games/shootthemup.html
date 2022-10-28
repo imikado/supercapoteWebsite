@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>titre du site</title>
+ 
+    <!-- meta -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+<script src="lib/main.js"></script>    
+<script src="lib/canvas.js"></script>    
+<script src="shootthemup.js"></script>
+<style>
+*{
+font-family:arial;
+font-size:12px;
+}
+a img{
+border:0px;
+}
+#point{
+position:absolute;
+width:2px;
+height:2px;
+background:red;
+}
+.case{
+position:absolute;
+}
+#debug{
+width:100%;
+height:400px;
+}
+#tour{
+position:absolute;
+}
+#jeu{
+position:absolute;
+}
+.pions{
+position:absolute;
+}
+#score{
+border:1px solid gray;
+width:398px;
+text-align:center;
+}
+#content{
+background:url('img/shootthemup_background.png') no-repeat;
+}
+#content a{
+cursor:crosshair;
+}
+#content img{
+border:0px;
+}
+#life{
+position:absolute;
+left:10px;
+top:10px;
+}
+</style>
+</head>
+<body onload="load()">
+
+<div id="life"></div>
+<div id="score">0</div>
+
+<div id="content"></div>
+<!--
+<textarea id="debug"></textarea>
+-->
+</body>
+</html>
+
+

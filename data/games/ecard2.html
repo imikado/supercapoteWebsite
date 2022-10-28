@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>titre du site</title>
+ 
+    <!-- meta -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+<script src="lib/main.js"></script>
+<script src="lib/canvas.js"></script>
+<script src="ecard2.js"></script>
+
+
+<style>
+*{
+font-family:arial;
+font-size:12px;
+margin:0px;
+}
+#point{
+position:absolute;
+width:2px;
+height:2px;
+background:red;
+}
+#pointhaut{
+position:absolute;
+width:2px;
+height:2px;
+background:blue;
+
+}
+#pointbas{
+position:absolute;
+width:2px;
+height:2px;
+background:orange;
+
+}
+#debug{
+width:60%;
+height:400px;
+display:none;
+}
+#tour{
+position:absolute;
+}
+#jeu{
+position:absolute;
+}
+.pions{
+position:absolute;
+}
+#i{
+position:absolute;
+left:750px;
+}
+#j{
+position:absolute;
+left:750px;
+top:20px;
+}
+
+#perso{
+position:absolute;
+top:0px;
+left:0px;
+width:300px;
+height:450px;
+}
+#perso img{
+position:absolute;
+top:0px;
+}
+#menu{
+position:absolute;
+top:260px;
+left:300px;
+border:1px solid gray;
+text-align:center;
+
+}
+#menu p{
+text-align:center;
+}
+#bulle{
+position:absolute;
+top:0px;
+left:300px;
+}
+#bulle_txt{
+position:absolute;
+top:30px;
+left:350px;
+border:0px solid red;
+width:196px;
+height:128px;
+text-align:center;
+}
+
+#popup{
+position:absolute;
+top:200px;
+left:300px;
+text-align:center;
+}
+#popup textarea,#popup input{
+width:300px;
+}
+
+#popup table{
+margin:0px auto;
+}
+
+#popup table th{
+text-align:right;
+}
+#popup table td{
+text-align:left;
+}
+#popup table input{
+border:1px solid gray;
+background:transparent;
+}
+
+</style>
+<script>
+function loadImg(){
+	var oCanvas=getById('canvas');
+	var a=getById('img');
+	if(a){
+		if(oCanvas){
+			a.value=oCanvas.toDataURL();
+		}
+	}
+	return true;
+}
+</script>
+</head>
+<body onload="load()">
+
+<canvas border="1" id="canvas" width="600" height="600">This text is displayed if your browser does not support HTML5 Canvas.</canvas>
+
+<div id="popup">
+	<form action="ecardsave2.php" method="POST" onsubmit="loadImg()">
+		<input type="hidden" name="img" id="img" />
+
+		<div id="content"></div>
+
+		<textarea id="texte" onKeyUp="writeBulle()">      Les capotes 
+     c'est pas fait 
+             pour 
+    les marmottes
+		
+		</textarea><br/>
+		<input type="text" name="mail" value="email@destinataire.com"/><br />
+	
+		<input type="submit" value="Envoyer" />
+	</form>
+</div>
+
+
+</body>
+</html>
+
+
