@@ -11,7 +11,7 @@ class ShopComponent extends ComponentAbstract implements ComponentInterface
     {
 
         $imagePath = 'css/images/shop';
-        $shopUrl = 'https://supercapote.myspreadshop.fr/';
+        $shopUrl = 'https://supercapote.myspreadshop.fr';
 
         $gameList = [
             new Item(
