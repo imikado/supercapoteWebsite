@@ -25,7 +25,7 @@ $fullTitle = ($title !== '' ? $title . ' · ' : '') . 'Supercapote.com';
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=<?php echo date('YmdHis') ?>">
 
   <script src="js/site.js" defer></script>
 </head>
