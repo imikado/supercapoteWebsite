@@ -1,37 +1,19 @@
-<div class="row">
-
-
+<ul class="grid">
     <?php foreach ($this->paramList['itemList'] as $itemLoop) : ?>
-
-
-
-        <div class="col s12 m3">
+        <li>
             <div class="card">
-                <div class="card-image">
-                    <img src="<?php echo $itemLoop->path . '/' . $itemLoop->image ?>">
-                </div>
-
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Téléchargements<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Téléchargements<i class="material-icons right">close</i></span>
-
-                    <div class="collection">
-
+                <a class="card-media" href="<?php echo $itemLoop->preview ?>" target="_blank">
+                    <img src="<?php echo $itemLoop->preview ?>" alt="Fond d'écran <?php echo htmlspecialchars($itemLoop->name) ?>" loading="lazy">
+                </a>
+                <div class="card-body">
+                    <h3><?php echo htmlspecialchars($itemLoop->name) ?></h3>
+                    <div class="chips">
                         <?php foreach ($itemLoop->linkList as $variantLoop => $linkLoop) : ?>
-                            <a class="collection-item center-align" target="_blank" href="<?php echo $linkLoop ?>"><?php echo $variantLoop ?></a>
-
+                            <a class="btn btn-sm btn-alt" href="<?php echo $linkLoop ?>" download>⬇ <?php echo $variantLoop ?></a>
                         <?php endforeach ?>
                     </div>
                 </div>
-
             </div>
-        </div>
-
-
-
+        </li>
     <?php endforeach; ?>
-
-
-</div>
+</ul>

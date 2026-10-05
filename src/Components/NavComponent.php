@@ -25,7 +25,7 @@ class NavComponent extends ComponentAbstract implements ComponentInterface
         $linkList = [
             'Accueil' => HomePage::FILENAME,
             'Jeux' => GamesPage::FILENAME,
-            'Bds' => ComicsPage::FILENAME,
+            'BDs' => ComicsPage::FILENAME,
             'Goodies' => GoodiesPage::FILENAME,
             'Boutique' => ShopPage::FILENAME,
 

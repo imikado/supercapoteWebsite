@@ -13,20 +13,20 @@ class GameListComponent extends ComponentAbstract implements ComponentInterface
         $imagePath = 'css/images/jeux';
 
         $gameList = [
-            new Game('Echec', $imagePath . '/echec3.html.png', 'echec3.html', 320, 400),
+            new Game('Échecs', $imagePath . '/echec3.html.png', 'echec3.html', 320, 400),
             new Game('Morpion', $imagePath . '/morpion.html.png', 'morpion.html', 330, 388),
-            new Game('Pacman', $imagePath . '/pacman.html.png', 'pacman.html', 360, 220),
+            new Game('Pac-Man', $imagePath . '/pacman.html.png', 'pacman.html', 360, 220),
             new Game('Snake', $imagePath . '/snake2.html.png', 'snake2.html', 414, 278),
             new Game('Tetris', $imagePath . '/tetris2.html.png', 'tetris2.html', 220, 400),
-            new Game('ShootThemUp', $imagePath . '/shootthemup.html.png', 'shootthemup.html', 420, 424),
-            new Game('Puissance4', $imagePath . '/puissance4.html.png', 'puissance4.html', 340, 410),
+            new Game('Shoot them up', $imagePath . '/shootthemup.html.png', 'shootthemup.html', 420, 424),
+            new Game('Puissance 4', $imagePath . '/puissance4.html.png', 'puissance4.html', 340, 410),
             new Game('Othello', $imagePath . '/othello.html.png', 'othello.html', 412, 394)
 
 
         ];
 
         return $this->renderViewWithParamList(
-            __DIR__ . '/Shared/cardList.php',
+            __DIR__ . '/Shared/gameList.php',
             [
                 'itemList' => $gameList
             ]
@@ -41,15 +41,17 @@ class Game
 {
 
     public $name;
-    public $href = '#';
-    public $onclick;
     public $image;
+    public $link;
+    public $width;
+    public $height;
 
     public function __construct($name, $image, $link, $width, $height)
     {
         $this->name = $name;
         $this->image = $image;
-
-        $this->onclick = "chooseGame('$link',$width,$height);return false";
+        $this->link = $link;
+        $this->width = $width;
+        $this->height = $height;
     }
 }

@@ -1,91 +1,62 @@
+<?php
+$title = $this->paramList['title'] ?? '';
+$description = $this->paramList['description'] ?? "Supercapote, le héros du quotidien qui vous protège des IST et vous aide dans votre contraception.";
+$fullTitle = ($title !== '' ? $title . ' · ' : '') . 'Supercapote.com';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Supercapote.com</title>
+  <title><?php echo htmlspecialchars($fullTitle) ?></title>
+  <meta name="description" content="<?php echo htmlspecialchars($description) ?>">
+  <meta name="theme-color" content="#7b1fa2">
 
-  <script src="js/main.js" type="text/javascript"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Supercapote.com">
+  <meta property="og:title" content="<?php echo htmlspecialchars($fullTitle) ?>">
+  <meta property="og:description" content="<?php echo htmlspecialchars($description) ?>">
+  <meta property="og:image" content="https://supercapote.com/data/img/dl/supercapote_ne_vole_pas1024x768.png">
+  <meta property="og:locale" content="fr_FR">
 
-  <script src="js/jeux.js" type="text/javascript"></script>
+  <link rel="icon" type="image/png" href="css/images/logo.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <style>
-    .logo {
-      background: url('css/images/logo.png') no-repeat 0px center;
-      padding-left: 55px;
-    }
-
-
-    #popup {
-      position: absolute;
-      background: #FFF;
-      border: 3px solid #444;
-      top: 10px;
-      left: 40px;
-    }
-
-    #popup a {
-      color: white;
-    }
-
-    #popup p {
-      background: #444;
-      margin: 0px;
-      text-align: right;
-      padding-right: 3px;
-    }
-
-    .main {
-      min-height: 500px;
-    }
-  </style>
+  <script src="js/site.js" defer></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
 
   <?php echo $this->paramList['nav']->render() ?>
 
-  <div class="header">&nbsp;</div>
-
-  <div class="main">
+  <main id="contenu">
     <div class="container">
-
-
       <?php foreach ($this->paramList['contentList'] as $contentLoop) :
         echo $contentLoop->render();
       endforeach; ?>
-
     </div>
+  </main>
 
-  </div>
-  <div id="popup" style="display:none;">
-    <p><a href="jeux.html">Fermer</a></p>
-    <iframe style="border:0px" id="gamesrc"></iframe>
-  </div>
-  </div>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Supercapote.com — le héros du quotidien</p>
+      <p>Une question ? <a href="https://www.sida-info-service.org/" target="_blank" rel="noopener">Sida Info Service</a> : 0 800 840 800 (gratuit, anonyme)</p>
+    </div>
+  </footer>
 
-
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <script>
-    (function($) {
-      $(function() {
-        $('.sidenav').sidenav();
-      }); // end of document ready
-    })(jQuery);
-  </script>
-
-
+  <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-bar">
+      <h2 id="viewer-title"></h2>
+      <button class="btn btn-sm" type="button" data-close>Fermer ✕</button>
+    </div>
+    <div class="viewer-content"></div>
+  </dialog>
 </body>
 
 </html>
-
-<!--cache -->

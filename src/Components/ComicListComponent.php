@@ -15,10 +15,11 @@ class ComicListComponent extends ComponentAbstract implements ComponentInterface
         $comicList = [];
 
         $filesList = scandir(__DIR__ . '/../../docs/data/img/comicstrip');
+        natsort($filesList);
         foreach ($filesList as $fileLoop) {
             if (substr($fileLoop, 0, 1) == '.') continue;
 
-            $comicList[] = new Comic(self::PATH, basename($fileLoop));
+            $comicList[] = new Comic(self::PATH, basename($fileLoop), count($comicList) + 1);
         }
 
         return $this->renderViewWithParamList(
@@ -38,10 +39,12 @@ class Comic
 
     public $path;
     public $image;
+    public $number;
 
-    public function __construct($path, $image)
+    public function __construct($path, $image, $number)
     {
         $this->path = $path;
         $this->image = $image;
+        $this->number = $number;
     }
 }

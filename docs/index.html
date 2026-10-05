@@ -3,118 +3,155 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Supercapote.com</title>
+  <meta name="description" content="Supercapote, le héros du quotidien qui vous protège des IST et vous aide dans votre contraception : jeux, BDs, fonds d'écran et boutique.">
+  <meta name="theme-color" content="#7b1fa2">
 
-  <script src="js/main.js" type="text/javascript"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Supercapote.com">
+  <meta property="og:title" content="Supercapote.com">
+  <meta property="og:description" content="Supercapote, le héros du quotidien qui vous protège des IST et vous aide dans votre contraception : jeux, BDs, fonds d'écran et boutique.">
+  <meta property="og:image" content="https://supercapote.com/data/img/dl/supercapote_ne_vole_pas1024x768.png">
+  <meta property="og:locale" content="fr_FR">
 
-  <script src="js/jeux.js" type="text/javascript"></script>
+  <link rel="icon" type="image/png" href="css/images/logo.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <style>
-    .logo {
-      background: url('css/images/logo.png') no-repeat 0px center;
-      padding-left: 55px;
-    }
-
-
-    #popup {
-      position: absolute;
-      background: #FFF;
-      border: 3px solid #444;
-      top: 10px;
-      left: 40px;
-    }
-
-    #popup a {
-      color: white;
-    }
-
-    #popup p {
-      background: #444;
-      margin: 0px;
-      text-align: right;
-      padding-right: 3px;
-    }
-
-    .main {
-      min-height: 500px;
-    }
-  </style>
+  <script src="js/site.js" defer></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-  <nav>
-    <div class="nav-wrapper deep-purple darken-5 logo">
-        <a href="#" class="brand-logo">Supercapote<sup>.com</sup></a>
-
-
-        <ul id="nav-mobile" class="sidenav" style="transform: translateX(-105%);">
-
-                            <li class="active" ><a href="index.html">Accueil</a></li>
-                            <li ><a href="jeux.html">Jeux</a></li>
-                            <li ><a href="bds.html">Bds</a></li>
-                            <li ><a href="goodies.html">Goodies</a></li>
-                            <li ><a href="shop.html">Boutique</a></li>
-            
-
-        </ul>
-
-
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            <li class="active" ><a href="index.html">Accueil</a></li>
-                            <li ><a href="jeux.html">Jeux</a></li>
-                            <li ><a href="bds.html">Bds</a></li>
-                            <li ><a href="goodies.html">Goodies</a></li>
-                            <li ><a href="shop.html">Boutique</a></li>
-            
-        </ul>
-
-        <a style="float:right" href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-
-
-
-    </div>
-</nav>
-  <div class="header">&nbsp;</div>
-
-  <div class="main">
+  <header class="site-header">
     <div class="container">
+        <a href="index.html" class="brand">
+            <img src="css/images/logo.png" alt="" width="50" height="66">
+            <span>Supercapote<small>.com</small></span>
+        </a>
 
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+        </button>
 
-      <p>Bienvenue sur le site supercapote.com, le site en l'honneur de notre h&eacute;ros du quotidien</p>
-<p>Vous trouverez ici diverses ressources pour aider &agrave; le promouvoir </p>
-<p>Super capote vous protège des IST et vous aide dans votre contraception</p>
+        <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+            <ul>
+                                    <li><a href="index.html" aria-current="page" >Accueil</a></li>
+                                    <li><a href="jeux.html" >Jeux</a></li>
+                                    <li><a href="bds.html" >BDs</a></li>
+                                    <li><a href="goodies.html" >Goodies</a></li>
+                                    <li><a href="shop.html" >Boutique</a></li>
+                            </ul>
+        </nav>
     </div>
+</header>
 
-  </div>
-  <div id="popup" style="display:none;">
-    <p><a href="jeux.html">Fermer</a></p>
-    <iframe style="border:0px" id="gamesrc"></iframe>
-  </div>
-  </div>
+  <main id="contenu">
+    <div class="container">
+      <section class="hero">
+    <div>
+        <h1>Supercapote</h1>
+        <p class="tagline">Le héros du quotidien</p>
+        <p>Bienvenue sur le site en l'honneur de notre héros du quotidien&nbsp;! Vous trouverez ici des jeux, des BDs et des goodies pour vous aider à le promouvoir.</p>
+        <p><strong>Supercapote vous protège des IST et vous aide dans votre contraception.</strong></p>
+        <div class="actions">
+            <a class="btn" href="jeux.html">▶ Jouer</a>
+            <a class="btn btn-alt" href="bds.html">Lire les BDs</a>
+            <a class="btn btn-red" href="shop.html">Boutique</a>
+        </div>
+    </div>
+    <div class="hero-visual">
+        <img src="data/img/dl/supercapote_ne_vole_pas1024x768.png" alt="Supercapote, le super-héros qui ne sait pas voler" width="1024" height="768">
+    </div>
+</section>
 
+<section class="section">
+    <h2>Au programme</h2>
+    <ul class="grid">
+        <li>
+            <a class="card" href="jeux.html">
+                <span class="card-media contain"><img src="css/images/jeux/pacman.html.png" alt="" loading="lazy"></span>
+                <span class="card-body">
+                    <h3>Jeux</h3>
+                    <p>Échecs, Pac-Man, Tetris, Snake… à jouer dans le navigateur.</p>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="card" href="bds.html">
+                <span class="card-media contain"><img src="data/img/comicstrip/comicstrip_1.jpg" alt="" loading="lazy"></span>
+                <span class="card-body">
+                    <h3>BDs</h3>
+                    <p>Les aventures du super-héros qui ne sait pas voler.</p>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="card" href="goodies.html">
+                <span class="card-media"><img src="data/img/dl/meme-bat-a-besoin-de-moi_1024x768.png" alt="" loading="lazy"></span>
+                <span class="card-body">
+                    <h3>Goodies</h3>
+                    <p>Fonds d'écran à télécharger et documents utiles.</p>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="card" href="shop.html">
+                <span class="card-media square"><img src="css/images/shop/supercapotedarkvador.jpg" alt="" loading="lazy"></span>
+                <span class="card-body">
+                    <h3>Boutique</h3>
+                    <p>T-shirts, débardeurs et mugs à l'effigie du héros.</p>
+                </span>
+            </a>
+        </li>
+    </ul>
+</section>
 
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<section class="section info">
+    <h2>Se protéger, c'est super</h2>
+    <div class="info-grid">
+        <div>
+            <h3>Le préservatif</h3>
+            <ul>
+                <li>C'est le seul moyen de contraception qui protège aussi des IST (VIH, chlamydia, gonocoque, syphilis…).</li>
+                <li>Un nouveau préservatif à chaque rapport, mis dès le début.</li>
+                <li>En France, les préservatifs sont gratuits en pharmacie pour les moins de 26 ans, sans ordonnance.</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Besoin d'infos&nbsp;?</h3>
+            <ul>
+                <li><a href="https://www.sida-info-service.org/" target="_blank" rel="noopener">Sida Info Service</a> : 0 800 840 800, gratuit et anonyme, 24h/24.</li>
+                <li><a href="https://www.onsexprime.fr/" target="_blank" rel="noopener">onsexprime.fr</a> : le site des ados sur la sexualité.</li>
+                <li><a href="https://www.questionsexualite.fr/" target="_blank" rel="noopener">questionsexualite.fr</a> : contraception, IST, dépistage.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+    </div>
+  </main>
 
-  <script>
-    (function($) {
-      $(function() {
-        $('.sidenav').sidenav();
-      }); // end of document ready
-    })(jQuery);
-  </script>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Supercapote.com — le héros du quotidien</p>
+      <p>Une question ? <a href="https://www.sida-info-service.org/" target="_blank" rel="noopener">Sida Info Service</a> : 0 800 840 800 (gratuit, anonyme)</p>
+    </div>
+  </footer>
 
-
+  <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-bar">
+      <h2 id="viewer-title"></h2>
+      <button class="btn btn-sm" type="button" data-close>Fermer ✕</button>
+    </div>
+    <div class="viewer-content"></div>
+  </dialog>
 </body>
 
 </html>
-
-<!--cache -->

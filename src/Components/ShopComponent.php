@@ -13,44 +13,52 @@ class ShopComponent extends ComponentAbstract implements ComponentInterface
         $imagePath = 'css/images/shop';
         $shopUrl = 'https://supercapote.myspreadshop.fr';
 
-        $gameList = [
+        $itemList = [
             new Item(
                 $imagePath . '/supercapotedarkvador.jpg',
+                'T-shirt « Je ne suis pas ton père »',
                 $shopUrl . '/supercapotedarkvador-A5d6cf84be44742417a3ab2eb?productType=6&sellable=xrdO8kQ0dNu13e5yBGk8-6-7&appearance=4'
             ),
             new Item(
                 $imagePath . '/supercapotecactus.jpg',
+                'T-shirt Supercapote cactus',
                 $shopUrl . '/supercapotecactus-A5d6cf85d2225092663c45674?productType=6&sellable=R4n3zJrkXETn9mvQgYRw-6-7&appearance=4'
             ),
             new Item(
                 $imagePath . '/supercapotedarkvadorgirl.jpg',
+                'Débardeur femme « Je ne suis pas ton père »',
                 $shopUrl . '/supercapotedarkvador-A5d6cf84be44742417a3ab2eb?productType=917&sellable=xrdO8kQ0dNu13e5yBGk8-917-16&appearance=348'
             ),
 
 
             new Item(
                 $imagePath . '/supercapotedentifrice.jpg',
+                'T-shirt « Héros du quotidien »',
                 $shopUrl . '/supercapote+dentifrice+heros+du+quotidien-A5d6cf828b264a14c272cf215?productType=6&sellable=92qdyQVdblUNx9AQpw1X-6-7&appearance=2'
             ),
 
             new Item(
                 $imagePath . '/supercapotehalteres.jpg',
+                'Débardeur Supercapote haltères',
                 $shopUrl . '/supercapote+le+heros+du+quotidien-A5d6cf8175fd3e40d5fccba88?productType=916&sellable=OwDE0oeoqMSZy4Ggex1j-916-15&appearance=2'
             ),
 
             new Item(
                 $imagePath . '/supercapote-et-le-dentifrice-sont-les-heros-du-quotidien.jpg',
+                'T-shirt premium « Héros du quotidien »',
                 $shopUrl . '/supercapote+dentifrice+heros+du+quotidien-A5d6cf8372225092663c41a57?productType=815&sellable=VRDwxgzeMrte4Jbd158j-815-9&appearance=2'
             ),
 
 
             new Item(
                 $imagePath . '/supercapote-le-heros-du-quotidien.jpg',
+                'T-shirt baseball Supercapote',
                 $shopUrl . '/supercapote-A5d6cf8705fd3e40d5fcd3a84?productType=114&sellable=OwDE0vkVEwiZy4GgeEnX-114-7&appearance=70'
             ),
 
             new Item(
                 $imagePath . '/supercapote-le-super-heros-qui-ne-sait-pas-voler.jpg',
+                'Mug « Le super-héros qui ne sait pas voler »',
                 $shopUrl . '/supercapote+ne+sait+pas+voler-A5d6cf82ee0c08361bd9d981e?productType=31&sellable=kawMglrxv1inaoM5EbZe-31-32&appearance=1&size=29'
             )
 
@@ -65,9 +73,9 @@ class ShopComponent extends ComponentAbstract implements ComponentInterface
         ];
 
         return $this->renderViewWithParamList(
-            __DIR__ . '/Shared/cardList.php',
+            __DIR__ . '/Shared/shopList.php',
             [
-                'itemList' => $gameList
+                'itemList' => $itemList
             ]
         );
     }
@@ -81,11 +89,13 @@ class Item
 
     public $href;
     public $image;
+    public $name;
 
-    public function __construct($image, $href)
+    public function __construct($image, $name, $href)
     {
 
         $this->image = $image;
+        $this->name = $name;
 
         $this->href = $href;
     }

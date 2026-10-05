@@ -3,233 +3,171 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Supercapote.com</title>
+  <title>Boutique · Supercapote.com</title>
+  <meta name="description" content="T-shirts et goodies Supercapote sur la boutique en ligne.">
+  <meta name="theme-color" content="#7b1fa2">
 
-  <script src="js/main.js" type="text/javascript"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Supercapote.com">
+  <meta property="og:title" content="Boutique · Supercapote.com">
+  <meta property="og:description" content="T-shirts et goodies Supercapote sur la boutique en ligne.">
+  <meta property="og:image" content="https://supercapote.com/data/img/dl/supercapote_ne_vole_pas1024x768.png">
+  <meta property="og:locale" content="fr_FR">
 
-  <script src="js/jeux.js" type="text/javascript"></script>
+  <link rel="icon" type="image/png" href="css/images/logo.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <style>
-    .logo {
-      background: url('css/images/logo.png') no-repeat 0px center;
-      padding-left: 55px;
-    }
-
-
-    #popup {
-      position: absolute;
-      background: #FFF;
-      border: 3px solid #444;
-      top: 10px;
-      left: 40px;
-    }
-
-    #popup a {
-      color: white;
-    }
-
-    #popup p {
-      background: #444;
-      margin: 0px;
-      text-align: right;
-      padding-right: 3px;
-    }
-
-    .main {
-      min-height: 500px;
-    }
-  </style>
+  <script src="js/site.js" defer></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-  <nav>
-    <div class="nav-wrapper deep-purple darken-5 logo">
-        <a href="#" class="brand-logo">Supercapote<sup>.com</sup></a>
-
-
-        <ul id="nav-mobile" class="sidenav" style="transform: translateX(-105%);">
-
-                            <li ><a href="index.html">Accueil</a></li>
-                            <li ><a href="jeux.html">Jeux</a></li>
-                            <li ><a href="bds.html">Bds</a></li>
-                            <li ><a href="goodies.html">Goodies</a></li>
-                            <li class="active" ><a href="shop.html">Boutique</a></li>
-            
-
-        </ul>
-
-
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            <li ><a href="index.html">Accueil</a></li>
-                            <li ><a href="jeux.html">Jeux</a></li>
-                            <li ><a href="bds.html">Bds</a></li>
-                            <li ><a href="goodies.html">Goodies</a></li>
-                            <li class="active" ><a href="shop.html">Boutique</a></li>
-            
-        </ul>
-
-        <a style="float:right" href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-
-
-
-    </div>
-</nav>
-  <div class="header">&nbsp;</div>
-
-  <div class="main">
+  <header class="site-header">
     <div class="container">
+        <a href="index.html" class="brand">
+            <img src="css/images/logo.png" alt="" width="50" height="66">
+            <span>Supercapote<small>.com</small></span>
+        </a>
 
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+        </button>
 
-      <div class="row">
-
-
-            <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                    <img src="css/images/shop/supercapotedarkvador.jpg">
-                </div>
-                <div class="card-content">
-                    <p></p>
-                </div>
-                <div class="card-action">
-                                            <a href="https://supercapote.myspreadshop.fr/supercapotedarkvador-A5d6cf84be44742417a3ab2eb?productType=6&sellable=xrdO8kQ0dNu13e5yBGk8-6-7&appearance=4" target="_blank">Acheter</a>
-
-                                    </div>
-            </div>
-        </div>
-            <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                    <img src="css/images/shop/supercapotecactus.jpg">
-                </div>
-                <div class="card-content">
-                    <p></p>
-                </div>
-                <div class="card-action">
-                                            <a href="https://supercapote.myspreadshop.fr/supercapotecactus-A5d6cf85d2225092663c45674?productType=6&sellable=R4n3zJrkXETn9mvQgYRw-6-7&appearance=4" target="_blank">Acheter</a>
-
-                                    </div>
-            </div>
-        </div>
-            <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                    <img src="css/images/shop/supercapotedarkvadorgirl.jpg">
-                </div>
-                <div class="card-content">
-                    <p></p>
-                </div>
-                <div class="card-action">
-                                            <a href="https://supercapote.myspreadshop.fr/supercapotedarkvador-A5d6cf84be44742417a3ab2eb?productType=917&sellable=xrdO8kQ0dNu13e5yBGk8-917-16&appearance=348" target="_blank">Acheter</a>
-
-                                    </div>
-            </div>
-        </div>
-            <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                    <img src="css/images/shop/supercapotedentifrice.jpg">
-                </div>
-                <div class="card-content">
-                    <p></p>
-                </div>
-                <div class="card-action">
-                                            <a href="https://supercapote.myspreadshop.fr/supercapote+dentifrice+heros+du+quotidien-A5d6cf828b264a14c272cf215?productType=6&sellable=92qdyQVdblUNx9AQpw1X-6-7&appearance=2" target="_blank">Acheter</a>
-
-                                    </div>
-            </div>
-        </div>
-            <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                    <img src="css/images/shop/supercapotehalteres.jpg">
-                </div>
-                <div class="card-content">
-                    <p></p>
-                </div>
-                <div class="card-action">
-                                            <a href="https://supercapote.myspreadshop.fr/supercapote+le+heros+du+quotidien-A5d6cf8175fd3e40d5fccba88?productType=916&sellable=OwDE0oeoqMSZy4Ggex1j-916-15&appearance=2" target="_blank">Acheter</a>
-
-                                    </div>
-            </div>
-        </div>
-            <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                    <img src="css/images/shop/supercapote-et-le-dentifrice-sont-les-heros-du-quotidien.jpg">
-                </div>
-                <div class="card-content">
-                    <p></p>
-                </div>
-                <div class="card-action">
-                                            <a href="https://supercapote.myspreadshop.fr/supercapote+dentifrice+heros+du+quotidien-A5d6cf8372225092663c41a57?productType=815&sellable=VRDwxgzeMrte4Jbd158j-815-9&appearance=2" target="_blank">Acheter</a>
-
-                                    </div>
-            </div>
-        </div>
-            <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                    <img src="css/images/shop/supercapote-le-heros-du-quotidien.jpg">
-                </div>
-                <div class="card-content">
-                    <p></p>
-                </div>
-                <div class="card-action">
-                                            <a href="https://supercapote.myspreadshop.fr/supercapote-A5d6cf8705fd3e40d5fcd3a84?productType=114&sellable=OwDE0vkVEwiZy4GgeEnX-114-7&appearance=70" target="_blank">Acheter</a>
-
-                                    </div>
-            </div>
-        </div>
-            <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                    <img src="css/images/shop/supercapote-le-super-heros-qui-ne-sait-pas-voler.jpg">
-                </div>
-                <div class="card-content">
-                    <p></p>
-                </div>
-                <div class="card-action">
-                                            <a href="https://supercapote.myspreadshop.fr/supercapote+ne+sait+pas+voler-A5d6cf82ee0c08361bd9d981e?productType=31&sellable=kawMglrxv1inaoM5EbZe-31-32&appearance=1&size=29" target="_blank">Acheter</a>
-
-                                    </div>
-            </div>
-        </div>
-    
-
-</div>
+        <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+            <ul>
+                                    <li><a href="index.html" >Accueil</a></li>
+                                    <li><a href="jeux.html" >Jeux</a></li>
+                                    <li><a href="bds.html" >BDs</a></li>
+                                    <li><a href="goodies.html" >Goodies</a></li>
+                                    <li><a href="shop.html" aria-current="page" >Boutique</a></li>
+                            </ul>
+        </nav>
     </div>
+</header>
 
-  </div>
-  <div id="popup" style="display:none;">
-    <p><a href="jeux.html">Fermer</a></p>
-    <iframe style="border:0px" id="gamesrc"></iframe>
-  </div>
-  </div>
+  <main id="contenu">
+    <div class="container">
+      <header class="page-header">
+    <h1>Boutique</h1>
+    <p>T-shirts, sweats et accessoires Supercapote, en vente sur notre boutique Spreadshop.</p>
+</header>
+<ul class="grid">
+            <li>
+            <a class="card" href="https://supercapote.myspreadshop.fr/supercapotedarkvador-A5d6cf84be44742417a3ab2eb?productType=6&amp;sellable=xrdO8kQ0dNu13e5yBGk8-6-7&amp;appearance=4" target="_blank" rel="noopener">
+                <span class="card-media square">
+                    <img src="css/images/shop/supercapotedarkvador.jpg" alt="T-shirt « Je ne suis pas ton père »" loading="lazy">
+                </span>
+                <span class="card-body">
+                    <h3>T-shirt « Je ne suis pas ton père »</h3>
+                    <span class="btn btn-sm">Voir sur la boutique ↗</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a class="card" href="https://supercapote.myspreadshop.fr/supercapotecactus-A5d6cf85d2225092663c45674?productType=6&amp;sellable=R4n3zJrkXETn9mvQgYRw-6-7&amp;appearance=4" target="_blank" rel="noopener">
+                <span class="card-media square">
+                    <img src="css/images/shop/supercapotecactus.jpg" alt="T-shirt Supercapote cactus" loading="lazy">
+                </span>
+                <span class="card-body">
+                    <h3>T-shirt Supercapote cactus</h3>
+                    <span class="btn btn-sm">Voir sur la boutique ↗</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a class="card" href="https://supercapote.myspreadshop.fr/supercapotedarkvador-A5d6cf84be44742417a3ab2eb?productType=917&amp;sellable=xrdO8kQ0dNu13e5yBGk8-917-16&amp;appearance=348" target="_blank" rel="noopener">
+                <span class="card-media square">
+                    <img src="css/images/shop/supercapotedarkvadorgirl.jpg" alt="Débardeur femme « Je ne suis pas ton père »" loading="lazy">
+                </span>
+                <span class="card-body">
+                    <h3>Débardeur femme « Je ne suis pas ton père »</h3>
+                    <span class="btn btn-sm">Voir sur la boutique ↗</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a class="card" href="https://supercapote.myspreadshop.fr/supercapote+dentifrice+heros+du+quotidien-A5d6cf828b264a14c272cf215?productType=6&amp;sellable=92qdyQVdblUNx9AQpw1X-6-7&amp;appearance=2" target="_blank" rel="noopener">
+                <span class="card-media square">
+                    <img src="css/images/shop/supercapotedentifrice.jpg" alt="T-shirt « Héros du quotidien »" loading="lazy">
+                </span>
+                <span class="card-body">
+                    <h3>T-shirt « Héros du quotidien »</h3>
+                    <span class="btn btn-sm">Voir sur la boutique ↗</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a class="card" href="https://supercapote.myspreadshop.fr/supercapote+le+heros+du+quotidien-A5d6cf8175fd3e40d5fccba88?productType=916&amp;sellable=OwDE0oeoqMSZy4Ggex1j-916-15&amp;appearance=2" target="_blank" rel="noopener">
+                <span class="card-media square">
+                    <img src="css/images/shop/supercapotehalteres.jpg" alt="Débardeur Supercapote haltères" loading="lazy">
+                </span>
+                <span class="card-body">
+                    <h3>Débardeur Supercapote haltères</h3>
+                    <span class="btn btn-sm">Voir sur la boutique ↗</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a class="card" href="https://supercapote.myspreadshop.fr/supercapote+dentifrice+heros+du+quotidien-A5d6cf8372225092663c41a57?productType=815&amp;sellable=VRDwxgzeMrte4Jbd158j-815-9&amp;appearance=2" target="_blank" rel="noopener">
+                <span class="card-media square">
+                    <img src="css/images/shop/supercapote-et-le-dentifrice-sont-les-heros-du-quotidien.jpg" alt="T-shirt premium « Héros du quotidien »" loading="lazy">
+                </span>
+                <span class="card-body">
+                    <h3>T-shirt premium « Héros du quotidien »</h3>
+                    <span class="btn btn-sm">Voir sur la boutique ↗</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a class="card" href="https://supercapote.myspreadshop.fr/supercapote-A5d6cf8705fd3e40d5fcd3a84?productType=114&amp;sellable=OwDE0vkVEwiZy4GgeEnX-114-7&amp;appearance=70" target="_blank" rel="noopener">
+                <span class="card-media square">
+                    <img src="css/images/shop/supercapote-le-heros-du-quotidien.jpg" alt="T-shirt baseball Supercapote" loading="lazy">
+                </span>
+                <span class="card-body">
+                    <h3>T-shirt baseball Supercapote</h3>
+                    <span class="btn btn-sm">Voir sur la boutique ↗</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a class="card" href="https://supercapote.myspreadshop.fr/supercapote+ne+sait+pas+voler-A5d6cf82ee0c08361bd9d981e?productType=31&amp;sellable=kawMglrxv1inaoM5EbZe-31-32&amp;appearance=1&amp;size=29" target="_blank" rel="noopener">
+                <span class="card-media square">
+                    <img src="css/images/shop/supercapote-le-super-heros-qui-ne-sait-pas-voler.jpg" alt="Mug « Le super-héros qui ne sait pas voler »" loading="lazy">
+                </span>
+                <span class="card-body">
+                    <h3>Mug « Le super-héros qui ne sait pas voler »</h3>
+                    <span class="btn btn-sm">Voir sur la boutique ↗</span>
+                </span>
+            </a>
+        </li>
+    </ul>
 
+<p class="section"><a class="btn btn-red" href="https://supercapote.myspreadshop.fr" target="_blank" rel="noopener">Toute la boutique Supercapote ↗</a></p>
+    </div>
+  </main>
 
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Supercapote.com — le héros du quotidien</p>
+      <p>Une question ? <a href="https://www.sida-info-service.org/" target="_blank" rel="noopener">Sida Info Service</a> : 0 800 840 800 (gratuit, anonyme)</p>
+    </div>
+  </footer>
 
-  <script>
-    (function($) {
-      $(function() {
-        $('.sidenav').sidenav();
-      }); // end of document ready
-    })(jQuery);
-  </script>
-
-
+  <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-bar">
+      <h2 id="viewer-title"></h2>
+      <button class="btn btn-sm" type="button" data-close>Fermer ✕</button>
+    </div>
+    <div class="viewer-content"></div>
+  </dialog>
 </body>
 
 </html>
-
-<!--cache -->
