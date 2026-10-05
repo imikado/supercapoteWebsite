@@ -45,7 +45,7 @@ $fullTitle = ($title !== '' ? $title . ' · ' : '') . 'Supercapote.com';
 
   <footer class="site-footer">
     <div class="container">
-      <p>© Supercapote.com — le héros du quotidien</p>
+      <p>&copy; <?php echo date('Y') ?> Supercapote.com &mdash; site généré avec <a href="https://github.com/imikado/dupotStaticGenerationFramework" target="_blank" rel="noopener">dupot/static-generation-framework</a></p>
       <p>Une question ? <a href="https://www.sida-info-service.org/" target="_blank" rel="noopener">Sida Info Service</a> : 0 800 840 800 (gratuit, anonyme)</p>
     </div>
   </footer>
